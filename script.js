@@ -5,8 +5,7 @@ function preload() {
 }
 function setup() {
     canvas = createCanvas(300, 300);
-    canvas.position(0, 100);
-    canvas.center();
+    canvas.position(750, 150);
     video = createCapture(VIDEO);
     video.size(300, 300);
     video.hide();
@@ -19,7 +18,7 @@ function modelLoaded() {
 function gotPoses(results) {
     if(results.length > 0) {
         console.log(results);
-        noseX = results[0].pose.nose.x - 14;
+        noseX = results[0].pose.nose.x - 16;
         noseY = results[0].pose.nose.y;
         console.log("Nose X = " + noseX);
         console.log("Nose Y = " + noseY);
